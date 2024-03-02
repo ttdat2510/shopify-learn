@@ -1,0 +1,6 @@
+{
+    "watch": ["./"],
+    "ext": "liquid",
+    "exec": "npx tailwindcss -i ./src/tailwind.css -o ./assets/application.css"
+  }
+  
