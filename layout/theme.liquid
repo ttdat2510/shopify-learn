@@ -12,9 +12,14 @@
     {{ 'application.css' | asset_url | stylesheet_tag }}
     {{ 'application.js' | asset_url | script_tag }}
     {% comment %} {{
-            'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js' | script_tag
-        }} {% endcomment %}
+                                                            'https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js' | script_tag
+                                        }} {% endcomment %}
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  {% comment %} <script defer src="assets/js/main.js"></script> {% endcomment %}
+  {% comment %} <script defer src="js/main.js"></script> {% endcomment %}
+
+  <!-- Thêm dòng này để import main.js -->
+
 
   </head>
   <body class="">
@@ -22,5 +27,7 @@
     <main role="main">
       {{ content_for_layout }}
     </main>
+    <script src="{{ 'dropdown.js' | asset_url }}" defer="defer"></script>
+
   </body>
-</html>
+</html>`
